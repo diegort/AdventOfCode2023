@@ -1,0 +1,66 @@
+# Archivos y directorios generados por el entorno de desarrollo
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Entorno virtual
+venv/
+env/
+*.env/
+
+# Archivos de configuración local
+*.ini
+*.log
+
+# Archivos de caché y archivos temporales
+*.log
+*.swp
+.DS_Store
+Thumbs.db
+
+# Carpeta de dependencias instaladas
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+
+# Archivos de configuración
+*.cfg
+*.conf
+
+# Entorno de desarrollo
+*.iml
+.idea/
+
+# Archivos de compilación y bytecode
+*.pyc
+*.pyo
+*.pyd
+*.pyc/
+__pycache__/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Ambiente de desarrollo VS Code
+.vscode/
+
+# Ambiente de desarrollo PyCharm
+.idea/
+
+# Dependencias y entorno virtual para Poetry
+__pypackages__/
+poetry.lock
+pyproject.toml
+
+# Dependencias y entorno virtual para Pipenv
+Pipfile.lock
+Pipfile
+
+# Dependencias y entorno virtual para pip
+requirements.txt
