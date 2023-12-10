@@ -1,7 +1,15 @@
 import sys
+import math
+from functools import reduce
+
+def lcm(a, b):
+    return abs(a * b) // math.gcd(a, b)
+
+# Función para calcular el MCM de una lista de números
+def lcm_list(numbers):
+    return reduce(lcm, numbers)
 
 D = open(sys.argv[1]).read().strip().splitlines()
-p1 = 0
 
 movements = D.pop(0)
 secuence_length = len(movements)
@@ -16,14 +24,19 @@ for line in D:
 
     map[key.strip()] = valores
 
-current_node = 'AAA'
-while True:
-    movement = movements[p1 % secuence_length]
+paths = []
+for key in map.keys():
+    if key[2] == 'A':
+        current_node = key
+        movement_count = 0
+        while True:
+            movement = movements[movement_count % secuence_length]
 
-    p1 += 1
-    
-    if map[current_node][movement] == 'ZZZ':
-        break
-    current_node = map[current_node][movement]
+            movement_count += 1
+            
+            if map[current_node][movement][2] == 'Z':
+                break
+            current_node = map[current_node][movement]
+        paths.append(movement_count)
 
-print(p1)
+print(lcm_list(paths))
